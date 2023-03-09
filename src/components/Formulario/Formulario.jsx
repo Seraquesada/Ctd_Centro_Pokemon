@@ -1,18 +1,18 @@
-import React from "react";
+import React,{useState,useEffect, useContext} from "react";
 import { Link } from "react-router-dom";
 import pokebola from "../../assets/pokebola.png";
 import entrenador from "../../assets/entrenador.png";
 import pikachu from "../../assets/pikachu.png";
 import Input from "../Input/Input";
 import Detalle from "./Detalle";
-import PropTypes from 'prop-types';
+import InputPokemons from "../Input/InputPokemons";
+import Select from "../Input/Select";
 // En este componente tenemos nuestro formulario y dentro de él
 // tenemos los componentes que necesitan consumir nuestro estado.
 // Recuerda cual es el paso que debemos tomar para que nuestros
 // componentes puedan consumir un estado global.
 
 const Formulario = () => {
-
 
   return (
     <>
@@ -25,7 +25,6 @@ const Formulario = () => {
           Home
         </Link>
       </header>
-  
       <div className="formulario-ingreso">
           <h3>Solicitud de atención</h3>
           <p>
@@ -43,15 +42,16 @@ const Formulario = () => {
                 <Input isEntrenador={true} name="apellido" label="Apellido" />
                 <Input isEntrenador={true} name="email" label="Email" type="email" />
               </div>
-                            <div>
+                <div>
                   <p className="nombre-seccion">
                     <img src={pikachu} alt="pikachu" />
                     <span>POKEMON</span>
                   </p>
                   <Input  name="nombrePokemon" label="Nombre" />
-                  <Input  name="elementoPokemon" label="Elemento" />
                   <Input  name="alturaPokemon" label="Altura" />
                   <Input  name="edadPokemon" label="Edad" />
+                  <Select name="tipoPokemon" label='Tipo'/>
+                  <InputPokemons/>
                 </div>
               </div>
               <Detalle />

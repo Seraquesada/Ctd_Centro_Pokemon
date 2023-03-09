@@ -1,14 +1,12 @@
-import React, { useContext,  } from "react";
+import React, { useContext } from "react";
 import PropTypes from 'prop-types';
-import { UserContext } from "../../context/ContextoFormulario";
 
+import { UserContext } from "../../context/ContextoFormulario";
 const Input = ({ name, label, type = "text",isEntrenador }) => {
   const {dispatch} = useContext(UserContext);
 
-  // Aqui deberíamos acceder al estado global para poder obtener los datos
-  // del formulario y una manera de actualizar los mismos.
 
-  // También, utilizaremos un estado local para manejar el estado del input.
+  
 
 /**
  * @description actualiza el estado global al salir del input correspondiente
@@ -17,6 +15,7 @@ const Input = ({ name, label, type = "text",isEntrenador }) => {
  */
 
   const onBlur = (e) =>dispatch(
+    
     {
       type:isEntrenador ? "ACTUALIZAR_ENTRENADOR" : "ACTUALIZAR_POKEMON",
       payload:{[e.target.name]:e.target.value}

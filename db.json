@@ -1,0 +1,19 @@
+{
+  "entrenadores": [
+    {
+      "entrenador": {
+        "nombre": "sera",
+        "apellido": "sera",
+        "email": "243"
+      },
+      "pokemon": {
+        "nombrePokemon": "423",
+        "tipoPokemon": "fighting",
+        "alturaPokemon": "2",
+        "edadPokemon": "32",
+        "especiePokemon": "butterfree"
+      },
+      "id": 1
+    }
+  ]
+}
